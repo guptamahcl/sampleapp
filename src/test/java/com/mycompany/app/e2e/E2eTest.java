@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.e2e;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -25,7 +25,7 @@ public class E2eTest
      */
     public static Test suite()
     {
-        return new TestSuite( smokeTest.class );
+        return new TestSuite( E2eTest.class );
     }
 
     /**

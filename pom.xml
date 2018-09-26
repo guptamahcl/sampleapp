@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud-contract.version>0.0.1</spring-cloud-contract.version>
+		<spring-cloud-contract.version>1.1.1.RELEASE</spring-cloud-contract.version>
 		<spring-cloud-bom.version>DEV</spring-cloud-bom.version>
 		<!-- [PIPELINE] -->
 		<distribution.management.release.id>artifactory-local</distribution.management.release.id>
@@ -59,69 +59,6 @@
 								<exclude>**/e2e/**</exclude>
 							</excludes>
 						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-maven-plugin</artifactId>
-					</plugin>
-					<plugin>
-						<groupId>com.spotify</groupId>
-						<artifactId>docker-maven-plugin</artifactId>
-						<version>0.4.11</version>
-						<goals>
-							<goal>build</goal>
-							<goal>push</goal>
-						</goals>
-						<configuration>
-							<serverId>${DOCKER_SERVER_ID}</serverId>
-							<registryUrl>${DOCKER_REGISTRY_URL}</registryUrl>
-							<imageName>${DOCKER_REGISTRY_ORGANIZATION}/${project.artifactId}</imageName>
-							<baseImage>frolvlad/alpine-oraclejdk8:slim</baseImage>
-							<imageTags>
-								<imageTag>${project.version}</imageTag>
-								<imageTag>latest</imageTag>
-							</imageTags>
-							<env>
-								<SYSTEM_PROPS>-Dfoo=bar</SYSTEM_PROPS>
-							</env>
-							<entryPoint>["sh", "-c", "java $${SYSTEM_PROPS} -Djava.security.egd=file:/dev/./urandom -jar /${project.build.finalName}.jar"]</entryPoint>
-							<resources>
-								<resource>
-									<targetPath>/</targetPath>
-									<directory>${project.build.directory}</directory>
-									<include>${project.build.finalName}.jar</include>
-								</resource>
-							</resources>
-						</configuration>
-						<executions>
-							<execution>
-								<id>build-image</id>
-								<phase>package</phase>
-								<goals>
-									<goal>build</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>push-latest-image</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>push</goal>
-								</goals>
-								<configuration>
-									<imageName>${DOCKER_REGISTRY_ORGANIZATION}/${project.artifactId}:latest</imageName>
-								</configuration>
-							</execution>
-							<execution>
-								<id>push-versioned-image</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>push</goal>
-								</goals>
-								<configuration>
-									<imageName>${DOCKER_REGISTRY_ORGANIZATION}/${project.artifactId}:${project.version}</imageName>
-								</configuration>
-							</execution>
-						</executions>
 					</plugin>
 				</plugins>
 			</build>
