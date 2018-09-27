@@ -34,7 +34,7 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>art1</id>
 			<name>Artifactory Repository</name>
-			<url>http://35.200.217.233:32151/artifactory/libs-release-local</url>
+			<url>http://35.200.217.233:32151/artifactory/libs-snapshot-local</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
