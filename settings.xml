@@ -4,19 +4,13 @@
                           https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
 <!-- 	<M2_SETTINGS_REPO_ID>35.200.134.234:32151</M2_SETTINGS_REPO_ID> -->
-	
 <!-- 	<M2_SETTINGS_REPO_USERNAME></M2_SETTINGS_REPO_USERNAME> -->
-	
 <!-- 	<M2_SETTINGS_REPO_PASSWORD></M2_SETTINGS_REPO_PASSWORD> -->
-	
 <!-- 	<DOCKER_SERVER_ID></DOCKER_SERVER_ID> -->
-	
 <!-- 	<DOCKER_USERNAME></DOCKER_USERNAME> -->
-	
 <!-- 	<DOCKER_PASSWORD></DOCKER_PASSWORD> -->
-	
 <!-- 	<DOCKER_EMAIL></DOCKER_EMAIL> -->
-	
+
 	<servers>
 		<server>
 			<id>art1</id>

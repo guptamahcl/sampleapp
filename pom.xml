@@ -23,7 +23,7 @@
 		<!-- [PIPELINE] -->
 		<repo.with.binaries>http://35.200.217.233:32151/artifactory/libs-release-local</repo.with.binaries>
 		<!-- KUBERNETES -->
-		<DOCKER_REGISTRY_ORGANIZATION>gcphcl</DOCKER_REGISTRY_ORGANIZATION>
+		<DOCKER_REGISTRY_ORGANIZATION>guptama</DOCKER_REGISTRY_ORGANIZATION>
 		<DOCKER_SERVER_ID>docker-repo</DOCKER_SERVER_ID>
 		<DOCKER_REGISTRY_URL>https://index.docker.io/v1/</DOCKER_REGISTRY_URL>
 		<latest.production.version>0.0.1.DEV</latest.production.version>
