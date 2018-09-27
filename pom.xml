@@ -26,6 +26,7 @@
 		<DOCKER_REGISTRY_ORGANIZATION>gcphcl</DOCKER_REGISTRY_ORGANIZATION>
 		<DOCKER_SERVER_ID>docker-repo</DOCKER_SERVER_ID>
 		<DOCKER_REGISTRY_URL>https://index.docker.io/v1/</DOCKER_REGISTRY_URL>
+		<latest.production.version></latest.production.version>
 	</properties>
   
 	<dependencies>
