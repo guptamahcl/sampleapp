@@ -1,4 +1,4 @@
-package com.mycompany.app.smoke.test;
+package smoke.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
