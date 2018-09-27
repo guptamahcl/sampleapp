@@ -1,4 +1,4 @@
-package com.mycompany.app.e2e;
+package com.mycompany.app.e2e.test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
