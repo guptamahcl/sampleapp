@@ -28,6 +28,12 @@
 		<DOCKER_REGISTRY_URL>https://index.docker.io/v1/</DOCKER_REGISTRY_URL>
 		<latest.production.version>0.0.1.DEV</latest.production.version>
 	</properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+    </parent>
 	
 	<distributionManagement>
 		<repository>
@@ -46,6 +52,20 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 	
 	<profiles>
@@ -71,8 +91,8 @@
 							</excludes>
 						</configuration>
 					</plugin>
-					<plugin>
-						<!-- Build an executable JAR -->
+					<!-- <plugin>
+						Build an executable JAR
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-jar-plugin</artifactId>
 						<version>3.1.0</version>
@@ -80,12 +100,16 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<!-- <classpathPrefix>lib/</classpathPrefix> -->
+									<classpathPrefix>lib/</classpathPrefix>
 									<mainClass>com.mycompany.app.App</mainClass>
 								</manifest>
 							</archive>
 						</configuration>
-					</plugin>
+					</plugin> -->
+					<plugin>
+		                <groupId>org.springframework.boot</groupId>
+		                <artifactId>spring-boot-maven-plugin</artifactId>
+		            </plugin>
 					<plugin>
 						<groupId>com.spotify</groupId>
 						<artifactId>docker-maven-plugin</artifactId>
@@ -237,6 +261,7 @@
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
+			
 			<repositories>
 				<repository>
 					<id>spring-snapshots</id>
@@ -257,7 +282,7 @@
 				<repository>
 					<id>spring-releases</id>
 					<name>Spring Releases</name>
-					<url>https://repo.spring.io/release</url>
+					<url>https://repo.spring.io/libs-release</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -283,7 +308,7 @@
 				<pluginRepository>
 					<id>spring-releases</id>
 					<name>Spring Releases</name>
-					<url>https://repo.spring.io/release</url>
+					<url>https://repo.spring.io/libs-release</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
