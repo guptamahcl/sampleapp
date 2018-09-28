@@ -1,9 +1,0 @@
-# This file describes which services are required by this application
-# in order for the smoke tests on the TEST environment and end to end tests
-# on the STAGE environment to pass
-
-# lowercase name of the environment
-test:
-  services:
-stage:
-  services:
