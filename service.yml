@@ -8,4 +8,6 @@ metadata:
 spec:
   selector:
     name: {{appName}}
-type: NodePort
+  ports:
+    - port: 80
+  type: NodePort
