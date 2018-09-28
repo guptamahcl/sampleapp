@@ -15,7 +15,7 @@ test:
       name: eureka-github-webhook
       coordinates: scpipelines/github-eureka:latest
     - type: stubrunner
-      name: stubrunner-github-webhook
+      name: stubrunner-sampleapp
       coordinates: scpipelines/github-analytics-stub-runner-boot-classpath-stubs:latest
       useClasspath: true
 stage:
