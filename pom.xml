@@ -6,7 +6,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>sampleapp</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0-RELEASE</version>
 	<name>sampleapp</name>
 	<url>http://maven.apache.org</url>
   
@@ -34,7 +34,7 @@
 			<uniqueVersion>false</uniqueVersion>
 			<id>art1</id>
 			<name>Artifactory Repository</name>
-			<url>http://35.200.217.233:32151/artifactory/libs-snapshot-local</url>
+			<url>http://35.200.217.233:32151/artifactory/libs-release-local</url>
 			<layout>default</layout>
 		</repository>
 	</distributionManagement>
