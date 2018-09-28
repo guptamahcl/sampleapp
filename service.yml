@@ -8,4 +8,3 @@ metadata:
 spec:
   selector:
     name: {{appName}}
-type: NodePort
