@@ -1,0 +1,4 @@
+com/mycompany/app/contracttests/test/ContractTest.class
+e2e/test/E2eTest.class
+com/mycompany/app/AppTest.class
+smoke/test/smokeTest.class

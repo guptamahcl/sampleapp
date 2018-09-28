@@ -1,4 +1,4 @@
-com\mycompany\app\Application.class
-com\mycompany\app\Health.class
-com\mycompany\app\GreetingController.class
-com\mycompany\app\Greeting.class
+com/mycompany/app/GreetingController.class
+com/mycompany/app/Greeting.class
+com/mycompany/app/Application.class
+com/mycompany/app/Health.class
